@@ -58,11 +58,11 @@ void aStar(const vector<vector<double>>& graph, int startX, int startY,
         int y = current->y;
         if (x == goalX && y == goalY) {
             cout << "Path found with cost: " << current->g << endl;
-            vector<pair<int, int>> path;
-            while (current) {
-                path.emplace_back(current->x, current->y);
-                current = current->parent;
-            }
+            // vector<pair<int, int>> path;
+            // while (current) {
+            //     path.emplace_back(current->x, current->y);
+            //     current = current->parent;
+            // }
             // reverse(path.begin(), path.end());
             // for (const auto& p : path) {
             //     cout << "(" << p.first << ", " << p.second << ") ";
@@ -163,6 +163,6 @@ int main() {
     finishTimeVal = clock();
     cout << "dikstra take "
          << (double)(finishTimeVal - startTimeVal) / CLOCKS_PER_SEC;
-
+    cout << endl;
     return 0;
 }
